@@ -1,0 +1,26 @@
+  
+name: Cars with CMake Ci
+
+on: 
+  push:
+  pull_request:
+    branches:
+      - master
+      - Cars
+
+jobs:
+  Cars tests:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@Cars
+    - name: mkdir build
+      run: mkdir build
+    - name: Compile
+      working-directory: build
+      run: |
+        cmake ..
+        make
+    - name: Run tests
+      working-directory: module1/homework/removeVowels/build
+      run: ctest -V
