@@ -22,5 +22,5 @@ jobs:
         cmake ..
         make
     - name: Run tests
-      working-directory: module1/homework/removeVowels/build
+      working-directory: build
       run: ctest -V
