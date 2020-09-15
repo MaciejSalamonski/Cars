@@ -9,7 +9,7 @@ on:
       - Cars
 
 jobs:
-  Cars tests:
+  Cars-ut:
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
